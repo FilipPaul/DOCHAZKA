@@ -1,0 +1,239 @@
+%%PREAMBLE %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\documentclass[10pt, a4paper]{article}% size of txt = 10pt
+\usepackage[top= 1cm,
+			bottom = 2cm,
+			left = 1.7cm,
+			right = 1.7cm,
+			footskip = 0.5cm,
+			headsep = 0cm,
+			headheight = 0cm
+					]{geometry}
+\usepackage{amsmath} % math packages
+\usepackage{amsfonts}% math packages
+\usepackage{amssymb} % math packages
+\usepackage{graphicx} %package for including graphics
+\usepackage{array}
+\usepackage[thinlines]{easytable}
+\usepackage{float}
+\usepackage[section]{placeins}
+\usepackage[hidelinks]{hyperref}
+\usepackage[shortlabels]{enumitem}
+\usepackage{svg}
+\usepackage{bigstrut}
+\usepackage{wrapfig,lipsum,booktabs}
+\usepackage{subcaption}
+\usepackage{xfrac}
+\usepackage{pdfpages}
+\usepackage{listings}
+\usepackage{xcolor}
+\usepackage{multirow}
+\usepackage{tabularx}
+
+
+\usepackage{listings}
+\usepackage{color} %red, green, blue, yellow, cyan, magenta, black, white
+\usepackage{float}
+
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\rfoot{Tady bude něco jako legenda: P: Příchod, O: Odchod, L: Lékař, D: Dovolená, N: Nemoc, atd.}
+
+\definecolor{mygreen}{RGB}{28,172,0} % color values Red, Green, Blue
+\definecolor{mylilas}{RGB}{170,55,241}
+
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
+\definecolor{backcolour}{rgb}{1,1,1}
+
+\lstdefinestyle{mystyle}{
+    backgroundcolor=\color{backcolour},   
+    commentstyle=\color{codegreen},
+    keywordstyle=\color{magenta},
+    numberstyle=\tiny\color{codegray},
+    stringstyle=\color{codepurple},
+    basicstyle=\ttfamily\footnotesize,
+    breakatwhitespace=false,         
+    breaklines=true,                 
+    captionpos=b,                    
+    keepspaces=true,                 
+    numbers=left,                    
+    numbersep=5pt,                  
+    showspaces=false,                
+    showstringspaces=false,
+    showtabs=false,                  
+    tabsize=2
+}
+\lstset{style=mystyle}
+
+
+%date format
+\def\mydate{\leavevmode\hbox{\twodigits\day.\twodigits\month.\the\year}}
+\def\twodigits#1{\ifnum#1<10 0\fi\the#1}
+
+\usepackage{indentfirst}
+\setlength{\parindent}{1cm}
+
+\makeatletter
+\newcommand{\thickhline}{%
+    \noalign {\ifnum 0=`}\fi \hrule height 2pt
+    \futurelet \reserved@a \@xhline
+}
+\newcolumntype{"}{@{\hskip\tabcolsep\vrule width 2pt\hskip\tabcolsep}}
+\makeatother
+\newcolumntype{?}{!{\vrule width 2pt}}
+%%DOC ENVIROMENT%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\newcolumntype{b}{X}
+\newcolumntype{h}{>{\hsize=.07\hsize}X}
+\newcolumntype{d}{>{\hsize=.2\hsize}X}
+
+\begin{document}
+%Title 
+\clearpage
+\begin{flushleft}%% left justification
+	\Large\textbf{Pracovní list zaměstnance \hspace{2.85cm} MESIC ROK\\}
+    \vspace*{0.5cm}
+    \begin{minipage}{0.45\textwidth}
+        \large\textbf{Jméno: JMENO}\\
+        \large\textbf{Přijmení: PRIJMENI}
+    \end{minipage}
+    \hfill
+    \begin{minipage}{0.45\textwidth}
+        \large\textbf{Osobní číslo: OSOBNICISLO}\\
+        \large\textbf{Úvazek: Tady budou typy úvazků}
+    \end{minipage}
+
+\end{flushleft}
+
+
+
+% Please add the following required packages to your document preamble:
+% \usepackage{multirow}
+\begin{table}[ht!]
+    \centering
+        \begin{tabularx}{\textwidth}{|d|X|h}
+        \hline
+
+        \textbf{Datum}         & \textbf{Příchody a odchody}       & \textbf{Hodiny} \\ \hline
+        Út 01.03.2022 &  Prichod 06:26:04 | Odchod 17:26:13  & 11:00:09  \\ \hline
+St 02.03.2022 &  Prichod 05:46:43  & CHYBA  \\ \hline
+Čt 03.03.2022 &  Odchod 17:07:15  & CHYBA  \\ \hline
+Pá 04.03.2022 &  Prichod 05:48:41 | Odchod 14:20:28  & 8:31:47  \\ \hline
+So 05.03.2022 &  & 0:00:00  \\ \hline
+Ne 06.03.2022 &  & 0:00:00  \\ \hline
+Po 07.03.2022 &  Prichod 05:55:24 | Odchod 17:00:50  & 11:05:26  \\ \hline
+Út 08.03.2022 &  Prichod 05:55:20 | Prichod 05:55:26  & CHYBA  \\ \hline
+St 09.03.2022 &  Prichod 05:56:35 | Odchod 17:22:19  & 11:25:44  \\ \hline
+Čt 10.03.2022 &  Prichod 10:27:12 | Odchod 16:51:22  & 6:24:10  \\ \hline
+Pá 11.03.2022 &  Prichod 05:44:13 | Odchod 13:16:32  & 7:32:19  \\ \hline
+So 12.03.2022 &  & 0:00:00  \\ \hline
+Ne 13.03.2022 &  & 0:00:00  \\ \hline
+Po 14.03.2022 &  & 0:00:00  \\ \hline
+Út 15.03.2022 &  & 0:00:00  \\ \hline
+St 16.03.2022 &  & 0:00:00  \\ \hline
+Čt 17.03.2022 &  Prichod 06:02:08 | Odchod 15:02:44  & 9:00:36  \\ \hline
+Pá 18.03.2022 &  Prichod 00:00:00 | Prichod 00:00:00  & CHYBA  \\ \hline
+So 19.03.2022 &  & 0:00:00  \\ \hline
+Ne 20.03.2022 &  & 0:00:00  \\ \hline
+Po 21.03.2022 &  Prichod 05:46:32 | Odchod 15:10:48  & 9:24:16  \\ \hline
+Út 22.03.2022 &  Prichod 05:43:21 | Odchod 17:41:12  & 11:57:51  \\ \hline
+St 23.03.2022 &  Prichod 05:55:35 | Odchod 15:16:09  & 9:20:34  \\ \hline
+Čt 24.03.2022 &  & 0:00:00  \\ \hline
+Pá 25.03.2022 &  Prichod 05:47:48 | Odchod 14:53:55  & 9:06:07  \\ \hline
+So 26.03.2022 &  & 0:00:00  \\ \hline
+Ne 27.03.2022 &  & 0:00:00  \\ \hline
+Po 28.03.2022 &  Prichod 05:10:23 | Odchod 16:02:36  & 10:52:13  \\ \hline
+Út 29.03.2022 &  Odchod 16:31:34  & CHYBA  \\ \hline
+St 30.03.2022 &  & 0:00:00  \\ \hline
+Čt 31.03.2022 &  Prichod 05:53:42 | Odchod 17:41:33  & 11:47:51  \\ \hline
+        %Pá 01.04.2022 &  Prichod 08:47:11 | Odchod 16:34:03  & 7:46:52  \\ \hline
+        %So 02.04.2022 &  & 0:00:00  \\ \hline
+        %Ne 03.04.2022 &  & 0:00:00  \\ \hline
+        %Po 04.04.2022 &  Prichod 07:24:29 | Odchod 15:55:06  & 8:30:37  \\ \hline
+        %Út 05.04.2022 &  Prichod 07:23:20 | Odchod 16:32:02  & 9:08:42  \\ \hline
+        %St 06.04.2022 &  Prichod 07:18:31  & CHYBA  \\ \hline
+        %Čt 07.04.2022 &  Prichod 07:06:08 | Odchod 16:07:15   & 9:01:07   \\ \hline
+        %Pá 08.04.2022 &  & 0:00:00  \\ \hline
+        %So 09.04.2022 &  & 0:00:00  \\ \hline
+        %Ne 10.04.2022 &  & 0:00:00  \\ \hline
+        %Po 11.04.2022 &  Prichod 07:08:56 | Odchod 13:06:47  & 5:57:51  \\ \hline
+        %Út 12.04.2022 &  & 0:00:00  \\ \hline
+        %St 13.04.2022 &  Prichod 06:00:15 | Odchod 16:08:21  & 10:08:06  \\ \hline
+        %Čt 14.04.2022 &  & 0:00:00  \\ \hline
+        %Pá 15.04.2022 sv &  & 0:00:00  \\ \hline
+        %So 16.04.2022 &  & 0:00:00  \\ \hline
+        %Ne 17.04.2022 &  & 0:00:00  \\ \hline
+        %Po 18.04.2022 sv &  & 0:00:00  \\ \hline
+        %Út 19.04.2022 &  Prichod 07:18:36  & CHYBA  \\ \hline
+        %St 20.04.2022 &  & 0:00:00  \\ \hline
+        %Čt 21.04.2022 &  & 0:00:00  \\ \hline
+        %Pá 22.04.2022 &  & 0:00:00  \\ \hline
+        %So 23.04.2022 &  & 0:00:00  \\ \hline
+        %Ne 24.04.2022 &  & 0:00:00  \\ \hline
+        %Po 25.04.2022 &  & 0:00:00  \\ \hline
+        %Út 26.04.2022 &  & 0:00:00  \\ \hline
+        %St 27.04.2022 &  & 0:00:00  \\ \hline
+        %Čt 28.04.2022 &  & 0:00:00  \\ \hline
+        %Pá 29.04.2022 &  & 0:00:00  \\ \hline
+        %So 30.04.2022 &  & 0:00:00  \\ \hline
+        %So 30.04.2022 &  & 0:00:00  \\ \hline
+        
+        \end{tabularx}
+    \end{table}
+
+    
+\begin{flushleft}%% left justification
+    \Large\textbf{Fond dle plánu směn:\\}
+    \vspace{0.3cm}
+
+    \begin{minipage}{0.49\textwidth}
+        \normalsize\textbf{Počet hodin: PLANHODh}\\
+    \end{minipage}
+    \hfill
+    \begin{minipage}{0.49\textwidth}
+        \normalsize\textbf{Počet dní: PLANDNY}\\
+
+    \end{minipage}
+
+    \vspace{0.3cm}
+    \Large\textbf{Celkový Souhrn:\\}
+    \vspace{0.3cm}
+
+    \begin{minipage}{0.49\textwidth}
+        \normalsize\textbf{Normální doba: NORMALh}\\
+        \normalsize\textbf{Dovolená: DOVOLENAh}\\
+        \normalsize\textbf{Nemoc: NEMOCh}\\
+        \normalsize\textbf{Lékař: LEKARh}\\
+        \normalsize\textbf{Převod z předchozího měsíce: PREDCHOZIh}
+    \end{minipage}
+    \hfill
+    \begin{minipage}{0.49\textwidth}
+        \normalsize\textbf{Pracovní cesty: PRACCESTYh}\\
+        \normalsize\textbf{Pochůzky: POCHUZKYh}\\
+        \normalsize\textbf{Přesčas: PRESCASh}\\
+        \normalsize\textbf{Počet započtených obědů: OBEDY}\\
+        \normalsize\textbf{Převod do dalšího měsíce: DALSIh}
+    \end{minipage}
+
+    \vspace{0.3cm}
+    \Large\textbf{Celkový čas: CELKEMh}\\
+
+\end{flushleft}
+
+
+\vspace{2cm}
+\begin{flushleft}%% left justification
+    \begin{minipage}{0.49\textwidth}
+        \normalsize\textbf{Podpis zaměstnance:\underline{\hspace{4cm}}}
+    \end{minipage}
+    \hfill
+    \begin{minipage}{0.49\textwidth}
+        \normalsize\textbf{Podpis vedoucího: \underline{\hspace{4cm}}}
+    \end{minipage}
+
+
+\end{flushleft}
+
+\end{document}

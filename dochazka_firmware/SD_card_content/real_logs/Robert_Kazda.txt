@@ -1,0 +1,7 @@
+--------------------------------------------------NEMAZAT!!!! V tomto souboru jsou uloženy logy. Tento řádek je automaticky generován a slouží pro inicializaci programu - NEMAZAT!!!!!!---------------------------------------------------------------------------
+
+LOG_ID;40;Jmeno;Robert;Prijmeni;Kazda;TAG;D9 F6 30 A4;STAV;Odchod;SAVED_TIME;09.02.2022 18:33:04;EDIT;NONE
+LOG_ID;42;Jmeno;Robert;Prijmeni;Kazda;TAG;D9 F6 30 A4;STAV;Prichod;SAVED_TIME;10.02.2022 06:45:24;EDIT;NONE
+LOG_ID;63;Jmeno;Robert;Prijmeni;Kazda;TAG;D9 F6 30 A4;STAV;Odchod;SAVED_TIME;10.02.2022 19:13:44;EDIT;NONE
+LOG_ID;64;Jmeno;Robert;Prijmeni;Kazda;TAG;D9 F6 30 A4;STAV;Prichod;SAVED_TIME;11.02.2022 05:57:02;EDIT;NONE
+LOG_ID;83;Jmeno;Robert;Prijmeni;Kazda;TAG;D9 F6 30 A4;STAV;Odchod;SAVED_TIME;11.02.2022 11:56:45;EDIT;NONE

@@ -1,0 +1,2 @@
+EMPLOYEE_ID;1;TAG;FF AB CD EE;Jmeno;Filip;Prijmeni;Paul;Song;None;Permissions;None;
+EMPLOYEE_ID;2;TAG;AA AB CD EE;Jmeno;Zuzana;Prijmeni;Gajduskova;Song;None;Permissions;None;

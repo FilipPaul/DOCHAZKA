@@ -1,0 +1,25 @@
+PATHS:
+  - {file: "logs.txt", path: "C:/Users/Paul/Desktop/dochazka/"}
+  - {file: "logs_new.txt", path: "C:/Users/Paul/Desktop/dochazka/"} 
+  - {file: "tags_new.txt", path: "C:/Users/Paul/Desktop/dochazka/"}
+ACCDB: "C:/Users/Paul/Desktop/dochazka/database.accdb"
+
+URL: "http://192.168.1.144/logs"
+
+
+#PATHS:
+#  - {file: "logs.txt", path: "C:/Users/Filip/Desktop/dochazka/"}
+#  - {file: "logs_new.txt", path: "C:/Users/Filip/Desktop/dochazka/"} 
+#  - {file: "tags_new.txt", path: "C:/Users/Filip/Desktop/dochazka/"}
+#ACCDB: "C:/Users/Filip/Desktop/dochazka/database.accdb"
+#
+#URL: "http://192.168.1.144/logs"
+#
+
+#PATHS:
+#  - {file: "logs.txt", path: "C:/Users/Filip/Desktop/dochazka/"}
+#  - {file: "logs_new.txt", path: "C:/Users/Filip/Desktop/dochazka/"} 
+#  - {file: "tags_new.txt", path: "C:/Users/Filip/Desktop/dochazka/"}
+#ACCDB: "C:/Users/Filip/Desktop/dochazka/database.accdb"
+#
+#URL: "http://192.168.1.144/logs"

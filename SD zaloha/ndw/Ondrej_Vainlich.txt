@@ -1,0 +1,5 @@
+--------------------------------------------------NEMAZAT!!!! V tomto souboru jsou uloženy logy. Tento řádek je automaticky generován a slouží pro inicializaci programu - NEMAZAT!!!!!!---------------------------------------------------------------------------
+
+LOG_ID;4;Jmeno;Ondrej;Prijmeni;Vainlich;TAG;CA 66 D5 62;STAV;Prichod;SAVED_TIME;01.02.2023 07:32:20;EDIT;NONE;
+LOG_ID;18;Jmeno;Ondrej;Prijmeni;Vainlich;TAG;CA 66 D5 62;STAV;Odchod;SAVED_TIME;01.02.2023 15:34:18;EDIT;NONE;
+LOG_ID;26;Jmeno;Ondrej;Prijmeni;Vainlich;TAG;CA 66 D5 62;STAV;Prichod;SAVED_TIME;02.02.2023 07:21:23;EDIT;NONE;

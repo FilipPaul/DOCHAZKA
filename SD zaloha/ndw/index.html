@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOCHÁZKA</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <!-- Navbar Section -->
+    <nav class="navbar">
+      <div class="navbar__container">
+        <a href="#home" id="navbar__logo">Docházka </a>
+
+        <ul class="navbar__menu">
+          <li class="navbar__item">
+            <a href="#Leds" class="navbar__links" id="Led-page">LEDs</a>
+          </li>
+          <li class="navbar__item">
+            <a href="/update" class="navbar__links" id="Ip-page">IP Settings</a>
+          </li>
+          <li class="navbar__btn">
+            <a href="#SaveButton" class="button" id="Save-button">Save</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <!--Input section-->
+    <div class="inputs">
+      <div class="inputs__container">
+        <label for="cmdlabel" class = "inp-label">Command:</label><br>
+        <input type="text" class = "inp-text" id="cmdLine" name="fname"><br>
+        <input class = "inp-button" type="submit" id="SENDbutton" value="Send">
+      </div>
+    </div>
+
+    <div class="slider">
+      <div class="slider__container">
+        <input type="range" min="0" max="255" value="100" class="slider" id="myRange">
+        <p>Value: <span id="slider_value"></span></p>
+      </div>
+    </div>
+
+
+    <!-- TIME -->
+    <div class="RTC_time">
+      <div class="RTC__container">
+        <h4 id="RTC_HEADER">Aktuální čas v systému</h4>
+        <div class="RTC_sync__container">
+            <p id = "RTC_time_value"> 22.08.2022 16:54</p>
+            <input type="submit" id="RTC_button" value="Synchronizovat">
+
+        </div>
+      </div>
+    </div>
+
+
+    <!-- Dynamic list -->
+    <div class="dynlist">
+      <div class="dynlist__container">
+        <h4 id="dynlist_HEADER">Přítomní lidé</h4>
+        <ul class="dynlist__list" id= "dynList">
+          <li class="dynlist__item" id = "dyn_list_li_HEADER">
+            <a href="#Leds" class="dynlist__links" id="dynlist_name_HEADER">Jméno a Přijmení</a>
+            <p class = "dynlist__status" id = "dynlist_date_HEADER">Datum a čas</p>
+            <p class = "dynlist__value" id = "dynlist_value_HEADER">STAV</p>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <!--Video Section
+    <div class="video__container">
+      <video width= 480 controls>
+        <source src="testVideo.mkv" type="video/mp4">
+      Your browser does not support the video tag.
+      </video>
+    </div>
+    -->
+    <script src="app.js"></script>
+  </body>
+</html>
