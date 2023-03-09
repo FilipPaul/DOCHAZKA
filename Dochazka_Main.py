@@ -446,6 +446,8 @@ try:
             "CELKEM" : f"{self.ui.la_transfer_current_month_num.text()} ({self.timeDeltaToHours(datetime.timedelta(hours=float(self.ui.la_transfer_current_month_num.text().replace(',','.').replace('h',''))))})",
             "CELKEMPREVOD" : f"{self.timeDeltaToHoursOnly(self.global_ov.overral_with_transfer)} ({self.timeDeltaToHours(self.global_ov.overral_with_transfer)})",
             }
+            if uvazek == "poloviční":
+                replacements["PLANDNY"] = f"{self.global_ov.time_plan_hours/4}"[:2]
 
 
 
@@ -1098,14 +1100,14 @@ try:
 
                                     elif "Jine" in table_widget.item(rows,columns).text():
                                         if self.current_TAG in self.YAML["POLOVICNI_UVAZKY"]:
-                                            hours["Nemoc"] +=  datetime.timedelta(hours=4, minutes=0, seconds=0)
+                                            hours["Jine"] +=  datetime.timedelta(hours=4, minutes=0, seconds=0)
                                         else:
                                             hours["Jine"] +=  datetime.timedelta(hours=8, minutes=0, seconds=0)
                                         self.hours_in_day[f"{self.current_Jmeno} {self.current_Prijmeni}"][f"{day}"]["Jine"] +=  datetime.timedelta(hours=8, minutes=0, seconds=0)
 
                                     elif "Dovolena" in table_widget.item(rows,columns).text():
                                         if self.current_TAG in self.YAML["POLOVICNI_UVAZKY"]:
-                                            hours["Nemoc"] +=  datetime.timedelta(hours=4, minutes=0, seconds=0)
+                                            hours["Dovolena"] +=  datetime.timedelta(hours=4, minutes=0, seconds=0)
                                         else:
                                             hours["Dovolena"] +=  datetime.timedelta(hours=8, minutes=0, seconds=0)
                                         
@@ -1195,7 +1197,8 @@ try:
                     self.hours_in_day[f"{self.current_Jmeno} {self.current_Prijmeni}"][f"{day}"]["Celkem bez obědů"] = "CHYBA"
                 else:
                     if ignore_today_flag == 0:
-                        if (hours["CELKEM"].seconds/3600  - hours["Nemoc"].seconds/3600  - hours["Dovolena"].seconds/3600 - hours["Jine"].seconds/3600 ) > self.ui.te_cnt_meals.value():
+                        if (hours["CELKEM"].seconds/3600  - hours["Nemoc"].seconds/3600  - hours["Dovolena"].seconds/3600 - hours["Jine"].seconds/3600-\
+                             hours["Prac Cesta"].seconds/3600 - hours["Pochuzka"].seconds/3600 - hours["Doktor"].seconds/3600) > self.ui.te_cnt_meals.value():
                             self.global_ov.meals += 1
                             self.hours_in_day[f"{self.current_Jmeno} {self.current_Prijmeni}"][f"{day}"]["Oběd"] = 1
                             self.hours_in_day[f"{self.current_Jmeno} {self.current_Prijmeni}"][f"{day}"]["Celkem bez obědů"]\
@@ -1229,6 +1232,7 @@ try:
 
             self.ui.la_ov_time_plan_hour.setText(f"{self.global_ov.time_plan_hours.total_seconds()/3600:0.2f}h")
             self.ui.la_ov_time_plan_days.setText( f"{self.global_ov.time_plan_hours.total_seconds()/3600/8:0.2f}dní")
+            
 
             self.ui.la_ov_holliday_hours.setText(f"{self.global_ov.holliday.total_seconds()/3600:0.2f}h")
             self.ui.la_ov_holliday_days.setText( f"{self.global_ov.holliday.total_seconds()/3600/8.5:0.2f}dní")

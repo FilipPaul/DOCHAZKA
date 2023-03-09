@@ -2,12 +2,13 @@ PATHS:
   - {file: "logs.txt", path: "C:/Users/Filip/Desktop/dochazka/"}
   - {file: "logs_new.txt", path: "C:/Users/Filip/Desktop/dochazka/"} 
   - {file: "tags_new.txt", path: "C:/Users/Filip/Desktop/dochazka/"}
+  
 #ACCDB: "//nas.cevor.local/Zalohy/Dochazka/database.accdb"
 #ACCDB: "//nas/Zalohy/Dochazka/database.accdb"
-ACCDB: C:/Users/Filip/Desktop/dochazka/database.accdb
+ACCDB: "C:/PROJECTS/DOCHAZKA/database.accdb"
 
 POLOVICNI_UVAZKY:
-  - AA BB CC DD #Jiri SPunar -> SEM dáš TAG člověka
+  - AA BB CC DD #Jiri SPuna
 # - TADY BY BYL DRUHY TAG  
 
 URL: "http://192.168.1.144/logs"
